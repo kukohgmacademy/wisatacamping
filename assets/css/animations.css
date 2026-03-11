@@ -1,0 +1,643 @@
+/* ============================================================
+   WISATA KEMPING BATU MALANG — ANIMATION ENGINE CSS
+   Covers: Hero FX, Scroll Reveal, Micro-interactions
+   ============================================================ */
+
+/* ─────────────────────────────────────────────
+   HERO SECTION — cinematic entrance system
+   ───────────────────────────────────────────── */
+
+/* Slow parallax shift on hero background */
+.hero-section {
+    animation: heroBgDrift 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroBgDrift {
+    from {
+        background-position: center 0%;
+    }
+
+    to {
+        background-position: center 6%;
+    }
+}
+
+/* Floating particle container */
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-particles span {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(232, 117, 42, 0.28);
+    filter: blur(1px);
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(110vh) scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-5vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Hero heading span — shimmer gradient */
+.hero-content h1 span {
+    background: linear-gradient(90deg, #E8752A 0%, #FFD060 40%, #F09040 70%, #E8752A 100%);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerText 3s linear infinite, fadeUp 1s ease-out both;
+    display: block;
+}
+
+@keyframes shimmerText {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
+
+/* CTA button pulsing glow */
+.hero-content .btn-cta {
+    animation: fadeUp 1s ease-out 0.4s both, ctaGlow 2.8s ease-in-out 1.8s infinite;
+}
+
+@keyframes ctaGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 15px rgba(232, 117, 42, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 4px 45px rgba(232, 117, 42, 0.7);
+    }
+}
+
+/* Hero p and button group */
+.hero-content p {
+    animation: fadeUp 1s ease-out 0.2s both;
+}
+
+/* Scroll indicator at bottom of hero */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeIn 1s ease 1.5s both;
+    transition: opacity 0.4s ease;
+}
+
+.hero-scroll-indicator span {
+    display: block;
+    width: 22px;
+    height: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+    position: relative;
+}
+
+.hero-scroll-indicator span::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    background: #fff;
+    border-radius: 2px;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    animation: scrollDot 1.6s ease-in-out infinite;
+}
+
+.hero-scroll-indicator p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@keyframes scrollDot {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+        opacity: 0.25;
+    }
+}
+
+/* Hero Mini (sub-page hero) title entrance */
+.hero-mini h1 {
+    animation: heroMiniSlide 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.hero-mini p.lead {
+    animation: heroMiniSlide 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+@keyframes heroMiniSlide {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Blog header entrance */
+.reading-tag {
+    animation: fadeDown 0.7s ease 0.1s both;
+}
+
+.blog-header-section h1 {
+    animation: fadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.blog-meta-enhanced {
+    animation: fadeUp 0.7s ease 0.4s both;
+}
+
+/* Navbar drop-in */
+.navbar {
+    animation: navDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes navDrop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Promo badge pop */
+.promo-badge {
+    animation: badgePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+@keyframes badgePop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ─────────────────────────────────────────────
+   SCROLL REVEAL — base hidden state
+   ───────────────────────────────────────────── */
+[data-animate] {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-property: opacity, transform;
+    transition-duration: 0.7s;
+}
+
+[data-animate="fade-up"] {
+    transform: translateY(40px);
+}
+
+[data-animate="fade-down"] {
+    transform: translateY(-30px);
+}
+
+[data-animate="fade-left"] {
+    transform: translateX(-45px);
+}
+
+[data-animate="fade-right"] {
+    transform: translateX(45px);
+}
+
+[data-animate="zoom-in"] {
+    transform: scale(0.86);
+}
+
+[data-animate="zoom-in-up"] {
+    transform: scale(0.9) translateY(35px);
+}
+
+[data-animate="flip-up"] {
+    transform: perspective(600px) rotateX(18deg) translateY(30px);
+}
+
+/* Visible state — toggled by Intersection Observer */
+[data-animate].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Duration overrides */
+[data-duration="400"] {
+    transition-duration: 0.4s;
+}
+
+[data-duration="500"] {
+    transition-duration: 0.5s;
+}
+
+[data-duration="600"] {
+    transition-duration: 0.6s;
+}
+
+[data-duration="650"] {
+    transition-duration: 0.65s;
+}
+
+[data-duration="700"] {
+    transition-duration: 0.7s;
+}
+
+[data-duration="800"] {
+    transition-duration: 0.8s;
+}
+
+[data-duration="900"] {
+    transition-duration: 0.9s;
+}
+
+[data-duration="1000"] {
+    transition-duration: 1s;
+}
+
+[data-duration="1200"] {
+    transition-duration: 1.2s;
+}
+
+/* Delay overrides */
+[data-delay="0"] {
+    transition-delay: 0s;
+}
+
+[data-delay="55"] {
+    transition-delay: 0.055s;
+}
+
+[data-delay="60"] {
+    transition-delay: 0.06s;
+}
+
+[data-delay="80"] {
+    transition-delay: 0.08s;
+}
+
+[data-delay="100"] {
+    transition-delay: 0.1s;
+}
+
+[data-delay="120"] {
+    transition-delay: 0.12s;
+}
+
+[data-delay="130"] {
+    transition-delay: 0.13s;
+}
+
+[data-delay="150"] {
+    transition-delay: 0.15s;
+}
+
+[data-delay="180"] {
+    transition-delay: 0.18s;
+}
+
+[data-delay="200"] {
+    transition-delay: 0.2s;
+}
+
+[data-delay="260"] {
+    transition-delay: 0.26s;
+}
+
+[data-delay="270"] {
+    transition-delay: 0.27s;
+}
+
+[data-delay="300"] {
+    transition-delay: 0.3s;
+}
+
+[data-delay="360"] {
+    transition-delay: 0.36s;
+}
+
+[data-delay="390"] {
+    transition-delay: 0.39s;
+}
+
+[data-delay="400"] {
+    transition-delay: 0.4s;
+}
+
+[data-delay="520"] {
+    transition-delay: 0.52s;
+}
+
+[data-delay="500"] {
+    transition-delay: 0.5s;
+}
+
+[data-delay="560"] {
+    transition-delay: 0.56s;
+}
+
+[data-delay="600"] {
+    transition-delay: 0.6s;
+}
+
+[data-delay="640"] {
+    transition-delay: 0.64s;
+}
+
+[data-delay="650"] {
+    transition-delay: 0.65s;
+}
+
+[data-delay="700"] {
+    transition-delay: 0.7s;
+}
+
+[data-delay="720"] {
+    transition-delay: 0.72s;
+}
+
+[data-delay="780"] {
+    transition-delay: 0.78s;
+}
+
+[data-delay="800"] {
+    transition-delay: 0.8s;
+}
+
+
+/* ─────────────────────────────────────────────
+   MICRO-INTERACTIONS (hover & active states)
+   ───────────────────────────────────────────── */
+
+/* Cards */
+.custom-card {
+    transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.38s ease;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px) scale(1.015);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+}
+
+.custom-card img {
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-card:hover img {
+    transform: scale(1.07);
+}
+
+/* Package Cards */
+.package-card {
+    transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.38s ease,
+        border-color 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 28px 65px rgba(0, 0, 0, 0.13);
+    border-color: var(--sunset-orange);
+}
+
+/* Package Detail Cards */
+.package-detail-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.package-detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Image reveal container */
+.img-reveal {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img-reveal img {
+    display: block;
+    width: 100%;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-reveal:hover img {
+    transform: scale(1.06);
+}
+
+/* Sidebar cards */
+.sidebar-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-cta,
+.btn-primary-custom,
+.btn-outline-custom {
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.28s ease,
+        background 0.28s ease !important;
+}
+
+/* Related article items */
+.related-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion items */
+.accordion-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateX(3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Footer links */
+footer a {
+    transition: color 0.25s ease, padding-left 0.25s ease !important;
+}
+
+footer a:hover {
+    padding-left: 4px;
+}
+
+/* Nav links */
+.nav-link {
+    transition: color 0.25s ease, transform 0.25s ease !important;
+}
+
+/* FAB WhatsApp pulse */
+.fab-wa-1 {
+    animation: waPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes waPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 35px rgba(37, 211, 102, 0.8);
+    }
+}
+
+.floating-btn {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease !important;
+}
+
+.floating-btn:hover {
+    transform: scale(1.2) translateY(-3px) !important;
+}
+
+/* Capacity boxes on packages page */
+.capacity-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.capacity-box:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Summary table rows */
+.table tr {
+    transition: background-color 0.2s ease;
+}
+
+/* Section title underline */
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* ─────────────────────────────────────────────
+   KEYFRAME UTILITIES
+   ───────────────────────────────────────────── */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ─────────────────────────────────────────────
+   ACCESSIBILITY — NO MOTION
+   ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    [data-animate] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
