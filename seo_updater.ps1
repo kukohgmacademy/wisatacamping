@@ -18,7 +18,7 @@ foreach ($file in $files) {
             $imgSrc = $imgMatch.Groups[1].Value
         }
         
-        $ogImageTag = "`n    <meta property=`"og:image`" content=`"https://wisatakempingbatumalang.com/$imgSrc`">`n    <meta name=`"twitter:card`" content=`"summary_large_image`">`n    <meta name=`"twitter:image`" content=`"https://wisatakempingbatumalang.com/$imgSrc`">"
+        $ogImageTag = "`n    <meta property=`"og:image`" content=`"https://wisatacampingbatu.web.id/$imgSrc`">`n    <meta name=`"twitter:card`" content=`"summary_large_image`">`n    <meta name=`"twitter:image`" content=`"https://wisatacampingbatu.web.id/$imgSrc`">"
         
         $content = $content -replace '(<meta property="og:type"[^>]*>)', "`$1$ogImageTag"
     }
@@ -32,7 +32,7 @@ foreach ($file in $files) {
         $desc = if ($descMatch.Success) { $descMatch.Groups[1].Value.Trim() } else { "" }
         
         $imgMatch = [regex]::Match($content, '<img[^>]*class="blog-featured-img"[^>]*src="([^"]+)"')
-        $imgSrc = if ($imgMatch.Success) { "https://wisatakempingbatumalang.com/" + $imgMatch.Groups[1].Value } else { "https://wisatakempingbatumalang.com/assets/img/logo.png" }
+        $imgSrc = if ($imgMatch.Success) { "https://wisatacampingbatu.web.id/" + $imgMatch.Groups[1].Value } else { "https://wisatacampingbatu.web.id/assets/img/logo.png" }
         
         $schema = @"
     <!-- JSON-LD Schema untuk Artikel -->
@@ -52,12 +52,12 @@ foreach ($file in $files) {
         "name": "Wisata Kemping Batu Malang",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://wisatakempingbatumalang.com/assets/img/logo.png"
+          "url": "https://wisatacampingbatu.web.id/assets/img/logo.png"
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://wisatakempingbatumalang.com/$($file.Name)"
+        "@id": "https://wisatacampingbatu.web.id/$($file.Name)"
       }
     }
     </script>

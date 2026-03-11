@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://wisatakempingbatumalang.com/</loc><lastmod>2026-03-05</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/about.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/gallery.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/packages.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/blog.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/tips-kemping-aman-nyaman-musim-hujan.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/5-manfaat-rahasia-liburan-kemping-bersama-keluarga.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/rekomendasi-menu-santap-alam-praktis-lezat.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/checklist-lengkap-peralatan-kemping-pemula.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wisatakempingbatumalang.com/kemping-tanpa-jejak-leave-no-trace.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/</loc><lastmod>2026-03-11</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/about.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/gallery.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/packages.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/blog.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/tips-kemping-aman-nyaman-musim-hujan.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/5-manfaat-rahasia-liburan-kemping-bersama-keluarga.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/rekomendasi-menu-santap-alam-praktis-lezat.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/checklist-lengkap-peralatan-kemping-pemula.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/kemping-tanpa-jejak-leave-no-trace.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/panduan-memilih-lokasi-kemping-terbaik.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/7-aktivitas-seru-saat-kemping.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/tips-kemping-bersama-anak.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wisatacampingbatu.web.id/panduan-stargazing-menikmati-langit-malam.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
