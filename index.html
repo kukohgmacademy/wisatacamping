@@ -20,14 +20,29 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>wisata camping batu.web.id</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Preconnect resource hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <!-- Preload LCP Hero Image for Mobile Performance -->
+    <link rel="preload" as="image" href="assets/img/hero_10_11zon.webp" fetchpriority="high">
+
+    <!-- Web Fonts with display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Local Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Font Awesome (non-blocking for fast mobile paint) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -81,10 +96,10 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand brand-font" href="index.html">
-                <img src="assets/img/logo.png" alt="KampBatu Logo"> BatuCamp </a>
+                <img src="assets/img/logo.png" alt="KampBatu Logo" width="42" height="42"> BatuCamp </a>
             <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="fas fa-bars fa-lg"></i>
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Buka navigasi menu">
+                <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -109,7 +124,7 @@
                         menakjubkan. Fasilitas modern dipadukan dengan pesona alam yang asri.</p>
                     <div style="animation: fadeUp 1s ease-out 0.5s both;">
                         <a href="https://wa.me/6281239225692?text=Halo%20saya%20ingin%20booking%20kemping"
-                            class="btn-cta me-3"><i class="fab fa-whatsapp me-2"></i>Booking Sekarang</a>
+                            class="btn-cta me-3"><i class="fab fa-whatsapp me-2" aria-hidden="true"></i>Booking Sekarang</a>
                         <a href="#packages" class="btn-outline-custom">Lihat Paket</a>
                     </div>
                 </div>
@@ -128,7 +143,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0" data-animate="fade-right" data-duration="900">
                     <div class="img-reveal">
                         <img src="assets/img/IMG20260218121105_11zon_32_11zon.webp" alt="Tentang Wisata Kemping Batu"
-                            class="img-fluid rounded shadow-lg">
+                            class="img-fluid rounded shadow-lg" width="600" height="400" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate="fade-left" data-duration="900" data-delay="200">
@@ -140,13 +155,13 @@
                     <p>Dibangun di atas area seluas 5 hektar yang dipenuhi pinus dan udara pegunungan segar, kamp kami
                         telah melayani ribuan pengunjung yang mencari rekoneksi dengan alam.</p>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);"></i>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);" aria-hidden="true"></i>
                             Fasilitas Sanitasi Premium 24 Jam</li>
-                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);"></i>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);" aria-hidden="true"></i>
                             Area Api Unggun Eksklusif</li>
-                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);"></i>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);" aria-hidden="true"></i>
                             Akses Listrik & WiFi Tersedia</li>
-                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);"></i>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: var(--sunset-orange);" aria-hidden="true"></i>
                             Keamanan CCTV & Penjagaan 24/7</li>
                     </ul>
                 </div>
@@ -157,7 +172,7 @@
                 <p>Pelajari nilai-nilai kami dan bagaimana kami memberikan pengalaman kemping terbaik melalui fasilitas
                     yang elegan dan pelayanan sekelas bintang lima.</p>
                 <a href="about.html" class="btn-primary-custom">Pelajari Tentang Kami <i
-                        class="fas fa-arrow-right ms-2"></i></a>
+                        class="fas fa-arrow-right ms-2" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
@@ -173,37 +188,37 @@
                 <div class="col-md-4">
                     <div class="custom-card">
                         <img src="assets/img/IMG20260218121105_11zon_32_11zon.webp"
-                            alt="Suasana pagi di kemping batu malang">
+                            alt="Suasana pagi di kemping batu malang" width="400" height="267" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <img src="assets/img/IMG20260218121251_11zon_34_11zon.webp"
-                            alt="Api unggun hangat di malam hari">
+                            alt="Api unggun hangat di malam hari" width="400" height="267" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <img src="assets/img/IMG20260218121809_11zon_39_11zon.webp"
-                            alt="Tenda glamping elegan dan nyaman">
+                            alt="Tenda glamping elegan dan nyaman" width="400" height="267" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <img src="assets/img/IMG20260218122054_11zon_42_11zon.webp"
-                            alt="Pemandangan indah pegunungan batu">
+                            alt="Pemandangan indah pegunungan batu" width="400" height="267" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <img src="assets/img/IMG_20260218_133501_187_11zon_25_11zon.webp"
-                            alt="Aktivitas santap alam bersama">
+                            alt="Aktivitas santap alam bersama" width="400" height="267" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <img src="assets/img/IMG_20260218_133827_382_11zon_30_11zon.webp"
-                            alt="Jalur pendakian yang asri">
+                            alt="Jalur pendakian yang asri" width="400" height="267" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -212,7 +227,7 @@
                 <h3>Abadikan Setiap Momen Berharga</h3>
                 <p>Lihat koleksi foto keindahan alam lainnya dari para pengunjung kami dan dapatkan inspirasi untuk
                     liburan Anda berikutnya di Batu.</p>
-                <a href="gallery.html" class="btn-cta">Lihat Galeri Lengkap <i class="fas fa-camera ms-2"></i></a>
+                <a href="gallery.html" class="btn-cta">Lihat Galeri Lengkap <i class="fas fa-camera ms-2" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
@@ -256,7 +271,6 @@
         </div>
     </section>
 
-
     <!-- Blog Section -->
     <section id="blog" class="section-padding">
         <div class="container">
@@ -268,7 +282,7 @@
                 <div class="col-md-4" data-animate="fade-up" data-duration="700" data-delay="0">
                     <div class="custom-card pb-3">
                         <img src="assets/img/IMG20260218121105_11zon_32_11zon.webp"
-                            alt="Tips kemping aman dan nyaman di musim hujan batu malang">
+                            alt="Tips kemping aman dan nyaman di musim hujan batu malang" width="400" height="267" loading="lazy" decoding="async">
                         <div class="p-3">
                             <h4 class="h5 mt-2"><a href="tips-kemping-aman-nyaman-musim-hujan.html"
                                     class="text-dark text-decoration-none">Tips Kemping
@@ -278,14 +292,14 @@
                                 tetap estetik dan elegan di alam terbuka.</p>
                             <a href="tips-kemping-aman-nyaman-musim-hujan.html" class="text-decoration-none"
                                 style="color: var(--sunset-orange);font-weight:600;">Baca Selengkapnya <i
-                                    class="fas fa-arrow-right ms-1"></i></a>
+                                    class="fas fa-arrow-right ms-1" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-animate="fade-up" data-duration="700" data-delay="200">
                     <div class="custom-card pb-3">
                         <img src="assets/img/IMG20260218121251_11zon_34_11zon.webp"
-                            alt="Manfaat liburan kemping keluarga di alam terbuka">
+                            alt="Manfaat liburan kemping keluarga di alam terbuka" width="400" height="267" loading="lazy" decoding="async">
                         <div class="p-3">
                             <h4 class="h5 mt-2"><a href="5-manfaat-rahasia-liburan-kemping-bersama-keluarga.html"
                                     class="text-dark text-decoration-none">5 Manfaat
@@ -295,14 +309,14 @@
                                 keluarga lewat alam bebas.</p>
                             <a href="5-manfaat-rahasia-liburan-kemping-bersama-keluarga.html"
                                 class="text-decoration-none" style="color: var(--sunset-orange);font-weight:600;">Baca
-                                Selengkapnya <i class="fas fa-arrow-right ms-1"></i></a>
+                                Selengkapnya <i class="fas fa-arrow-right ms-1" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-animate="fade-up" data-duration="700" data-delay="400">
                     <div class="custom-card pb-3">
                         <img src="assets/img/IMG20260218121809_11zon_39_11zon.webp"
-                            alt="Rekomendasi masakan kemping praktis yang lezat nan elegan">
+                            alt="Rekomendasi masakan kemping praktis yang lezat nan elegan" width="400" height="267" loading="lazy" decoding="async">
                         <div class="p-3">
                             <h4 class="h5 mt-2"><a href="rekomendasi-menu-santap-alam-praktis-lezat.html"
                                     class="text-dark text-decoration-none">Rekomendasi
@@ -312,13 +326,13 @@
                                 glamping sultan yang simpel.</p>
                             <a href="rekomendasi-menu-santap-alam-praktis-lezat.html" class="text-decoration-none"
                                 style="color: var(--sunset-orange);font-weight:600;">Baca Selengkapnya <i
-                                    class="fas fa-arrow-right ms-1"></i></a>
+                                    class="fas fa-arrow-right ms-1" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section-cta">
-                <a href="blog.html" class="btn-cta">Telusuri Semua Artikel <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="blog.html" class="btn-cta">Telusuri Semua Artikel <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
@@ -336,11 +350,11 @@
                         <div class="accordion-item shadow-sm mb-3">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne">
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Apakah area kemping aman untuk anak-anak?
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     Sangat aman. Area kami dijaga 24 jam dan kami memiliki zona khusus yang jaraknya
@@ -352,11 +366,12 @@
                         <div class="accordion-item shadow-sm mb-3">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo">
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Apakah diperbolehkan membawa hewan peliharaan (Pet Friendly)?
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     Ya, kami memperbolehkan hewan peliharaan asalkan Anda selalu menjaganya dalam area
                                     Anda, membersihkan kotorannya, dan hewan tersebut tidak mengganggu kenyamanan
@@ -367,11 +382,12 @@
                         <div class="accordion-item shadow-sm mb-3">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree">
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     Bagaimana jika turun hujan deras?
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     Kami menyewakan flysheet tambahan dan setiap tenda dari paket kami telah berstandar
                                     double-layer anti air. Kami juga memiliki aula komunal semi-outdoor yang aman
@@ -388,7 +404,7 @@
                 <p>Jangan lewatkan momen matahari terbit yang memukau di atas awan. Slot terbatas setiap minggunya untuk
                     menjaga kenyamanan pengunjung.</p>
                 <a href="https://wa.me/6281239225692?text=Halo%20saya%20ingin%20Booking%20Sekarang"
-                    class="btn-cta btn-lg">Booking Sekarang via WhatsApp <i class="fab fa-whatsapp ms-2"></i></a>
+                    class="btn-cta btn-lg">Booking Sekarang via WhatsApp <i class="fab fa-whatsapp ms-2" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
@@ -399,7 +415,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <div class="footer-logo">
-                        <img src="assets/img/logo.png" alt="KampBatu Logo">
+                        <img src="assets/img/logo.png" alt="KampBatu Logo" width="42" height="42" loading="lazy" decoding="async">
                         <span>KampBatu</span>
                     </div>
                     <p>Wisata Kemping Batu Malang memberikan Anda harmoni antara alam dan kenyamanan elegan. Destinasi
@@ -429,10 +445,10 @@
                 <div class="col-lg-3">
                     <h5>Kontak Kami</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jl. Gn. Banyak, Jurangrejo,
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> Jl. Gn. Banyak, Jurangrejo,
                             Pandesari, Kec. Bumiaji, Kota Batu, Jawa Timur 65391
                         </li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 0812-3922-5692</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2" aria-hidden="true"></i> 0812-3922-5692</li>
                     </ul>
                 </div>
             </div>
@@ -444,16 +460,17 @@
     <!-- Floating Action Buttons -->
     <div class="fab-container">
         <a href="https://wa.me/6281239225692" target="_blank" class="floating-btn fab-wa-1 shadow-lg"
-            aria-label="WhatsApp CS" title="Hubungi CS 1">
-            <i class="fab fa-whatsapp"></i>
+            aria-label="Hubungi WhatsApp Customer Service" title="Hubungi CS 1">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
-        <a href="#" class="floating-btn fab-top shadow-lg" id="btnTop" aria-label="Back to Top" title="Kembali ke Atas">
-            <i class="fas fa-arrow-up"></i>
+        <a href="#" class="floating-btn fab-top shadow-lg" id="btnTop" aria-label="Kembali ke Atas" title="Kembali ke Atas">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Scripts with defer to eliminate render blocking -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
